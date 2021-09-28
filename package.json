@@ -1,0 +1,24 @@
+{
+  "name": "expressjs-app-v2",
+  "version": "1.0.0",
+  "description": "Practise Tutorials",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abid-java/expressjs-app-v2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abid-java/expressjs-app-v2/issues"
+  },
+  "homepage": "https://github.com/abid-java/expressjs-app-v2#readme"
+}
