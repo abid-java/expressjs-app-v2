@@ -1,0 +1,12 @@
+A.)We should have Node n NPM(Node Package Manager) installed, Check the versions on your machine.
+    Node - **node --version**
+    NPM - **npm --version**
+    
+B.)Since we will need to continuously change/update code, We want it to Auto-Monitor/Hot-Reload, Install Nodemon.
+    **npm install nodemon**
+    
+C.)Initialize npm using below command.
+    **npm init**
+
+D.)Install Express package using below command
+    **npm install express --save
