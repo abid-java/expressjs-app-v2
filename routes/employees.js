@@ -72,4 +72,14 @@ router.get('/search/:empId([0-9]{4})', (request, response) => {
     response.json(successResponse);
 });
 
+router.get('/search-emplopyeename/:empName([a-zA-Z])', (request, response) => {
+    console.log("Request Params : ", request.params.empName);
+    var successResponse = {
+        "id": request.params.empId,
+        "status": 200,
+        "description": "Employee Fetched Successfully",
+    };
+    response.json(successResponse);
+});
+
 module.exports = router;
