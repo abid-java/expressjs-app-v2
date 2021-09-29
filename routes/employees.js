@@ -1,4 +1,5 @@
 /*jshint esversion: 6 */
+const { response } = require("express");
 var express = require("express");
 var router = express.Router();
 
@@ -80,6 +81,16 @@ router.get('/search-emplopyeename/:empName([a-zA-Z])', (request, response) => {
         "description": "Employee Fetched Successfully",
     };
     response.json(successResponse);
+});
+
+router.get("*", (request,response) => {
+    console.log("Request Details : ", request.originalUrl+"\n",request.headers);
+    var errorResponse = {
+        "status" : 500,
+        "message": "Internal Server Exception",
+        "description": request.originalUrl + " not found"
+    };
+    response.json(errorResponse);
 });
 
 module.exports = router;

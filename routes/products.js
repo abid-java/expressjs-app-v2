@@ -72,4 +72,14 @@ router.get('/search/:prodId([0-9]{4})', (request, response) => {
     response.json(successResponse);
 });
 
+router.get('/search-productname/:prodName([a-zA-Z])', (request, response) => {
+    console.log("Request Params : ", request.params.prodName);
+    var successResponse = {
+        "id": request.params.prodName,
+        "status": 200,
+        "description": "Employee Fetched Successfully",
+    };
+    response.json(successResponse);
+});
+
 module.exports = router;
