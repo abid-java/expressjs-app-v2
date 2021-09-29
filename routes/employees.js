@@ -44,9 +44,18 @@ router.get('/', (request, response) => {
 });
 
 router.get('/:employeeId', (request, response) => {
-    console.log("Request Params : ", request.paramsn.employeeId);
+    console.log("Request Params : ", request.params.employeeId);
     var successResponse = {
         "id": request.params.employeeId,
+        "status": 200,
+        "description": "Employee Created Successfully",
+    };
+    response.json(successResponse);
+});
+
+router.get('/:city/:state', (request, response) => {
+    console.log("Request Params : ", request.params.city + "=====" + request.params.state);
+    var successResponse = {
         "status": 200,
         "description": "Employee Created Successfully",
     };

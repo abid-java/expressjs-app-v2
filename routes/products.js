@@ -44,7 +44,7 @@ router.get('/', (request, response) => {
 });
 
 router.get('/:productId', (request, response) => {
-    console.log("Request Params : ", request.paramsn.productId);
+    console.log("Request Params : ", request.params.productId);
     var successResponse = {
         "id": request.params.productId,
         "status": 200,
