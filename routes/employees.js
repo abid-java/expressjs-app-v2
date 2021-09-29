@@ -3,6 +3,16 @@ const { response } = require("express");
 var express = require("express");
 var router = express.Router();
 
+//middle-ware
+router.use('/', (request, response, next) => {
+    //check if user is authenticated
+    //check if data is correct
+    //check if all data is present
+    //check if user is active
+    console.log("<========= Request Recieved : " + Date.now() + " =========>");
+    next();
+});
+
 router.get('/', (request, response) => {
     console.log("Request Object : ", request);
     var employees = [{
@@ -83,10 +93,10 @@ router.get('/search-emplopyeename/:empName([a-zA-Z])', (request, response) => {
     response.json(successResponse);
 });
 
-router.get("*", (request,response) => {
-    console.log("Request Details : ", request.originalUrl+"\n",request.headers);
+router.get("*", (request, response) => {
+    console.log("Request Details : ", request.originalUrl + "\n", request.headers);
     var errorResponse = {
-        "status" : 500,
+        "status": 500,
         "message": "Internal Server Exception",
         "description": request.originalUrl + " not found"
     };
