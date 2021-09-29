@@ -6,8 +6,10 @@ var app = express();
 
 const PORT = process.env.PORT || 4000;
 
-app.use('/employees', employees);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+app.use('/employees', employees);
 app.use('/products', products);
 
 // Node -> http.createServer
