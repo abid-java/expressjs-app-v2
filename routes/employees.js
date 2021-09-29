@@ -62,4 +62,14 @@ router.get('/:city/:state', (request, response) => {
     response.json(successResponse);
 });
 
+router.get('/search/:empId([0-9]{4})', (request, response) => {
+    console.log("Request Params : ", rerquest.params.empId);
+    var successResponse = {
+        "id": request.params.empId,
+        "status": 200,
+        "description": "Employee Created Successfully",
+    };
+    response.json(successResponse);
+});
+
 module.exports = router;

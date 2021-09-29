@@ -53,4 +53,23 @@ router.get('/:productId', (request, response) => {
     response.json(successResponse);
 });
 
+router.get('/:city/:state', (request, response) => {
+    console.log("Request Params : ", request.params.city + "=====" + request.params.state);
+    var successResponse = {
+        "status": 200,
+        "description": "Employee Created Successfully",
+    };
+    response.json(successResponse);
+});
+
+router.get('/search/:prodId([0-9]{4})', (request, response) => {
+    console.log("Request Params : ", rerquest.params.prodId);
+    var successResponse = {
+        "id": request.params.prodId,
+        "status": 200,
+        "description": "Employee Created Successfully",
+    };
+    response.json(successResponse);
+});
+
 module.exports = router;
