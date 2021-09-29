@@ -53,21 +53,21 @@ router.get('/:employeeId', (request, response) => {
     response.json(successResponse);
 });
 
-router.get('/:city/:state', (request, response) => {
+/*router.get('/:city/:state', (request, response) => {
     console.log("Request Params : ", request.params.city + "=====" + request.params.state);
     var successResponse = {
         "status": 200,
         "description": "Employee Created Successfully",
     };
     response.json(successResponse);
-});
+}); */
 
 router.get('/search/:empId([0-9]{4})', (request, response) => {
-    console.log("Request Params : ", rerquest.params.empId);
+    console.log("Request Params : ", request.params.empId);
     var successResponse = {
         "id": request.params.empId,
         "status": 200,
-        "description": "Employee Created Successfully",
+        "description": "Employee Fetched Successfully",
     };
     response.json(successResponse);
 });
